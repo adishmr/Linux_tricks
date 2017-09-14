@@ -1,0 +1,15 @@
+set cursorline
+autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
+set number nu 
+set incsearch is
+set ignorecase ic
+set hlsearch hls
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+filetype plugin on
