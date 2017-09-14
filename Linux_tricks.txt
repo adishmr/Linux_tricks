@@ -107,6 +107,9 @@ check for hyperthreading
 >> terminal default color
 	#310423
 
-
+>> List available wifi networks
+	nmcli dev wifi list
+>> connect to an SSID
+	nmcli device wifi connect SSID-Name password wireless-password
 
 
