@@ -112,4 +112,7 @@ check for hyperthreading
 >> connect to an SSID
 	nmcli device wifi connect SSID-Name password wireless-password
 
-
+>> Get CPU information
+	cat /proc/cpuinfo
+>> Get Memory info
+	cat /proc/meminfo
