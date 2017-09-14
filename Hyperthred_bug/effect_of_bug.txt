@@ -1,0 +1,15 @@
+I own an Intel i5 seventh generation laptop.
+It is the best in its range comapared to its price.
+But on the first day itself I found that this laptop is crashing very frequently.
+I was transfering the files then the system freezed. I didn't care as it may happens
+when transferring large no.of files. but on the following days, without any reasons
+it freezed many times, while i was only using text editor.
+I tried many things, edited grub, added the quite-splash edit mentioned by most of
+the sites. But nothing really helps. 
+ Then i checked more about this system crash, I found that there are some bugs in 
+Intel Skylake and Kaby lake series.
+Only thing I understood that this was something related to the hyperthreading.
+I checked in the forums and found some script to diable the hyperthreading from the
+starting of the system.
+i tried the script and so far i didn't experience any system crash.
+
