@@ -1,0 +1,112 @@
+/******************************************************************************
+ * @file name: Linux_tricks.txt
+ * @author   : Adish M R
+ * All these commands are found from the linux forums and from various sites.
+ * As a beginner in Linux I kept these commands documented for the future use.
+ * This help me as a quick reference to check whenever an issue comes.
+ * this is not an orderly structured commands, I only included the commands,
+ * that i tends to forgot.
+ * ***************************************************************************/
+>> System problem detected
+	sudo rm /var/crash/*
+
+>> Change host name of the System.
+	vi /etc/hostname give the new host name
+	vi /etc/hosts in this edit the name on 127.0.1.1 
+>> update
+	sudo apt-get update
+
+>> see the list of upgradable packages
+	sudo apt list --upgradable
+
+>> add repository
+	sudo add-apt-repository ppa:ppa_name
+
+>> remove a repository
+	sudo add-apt-repository -r ppa:ppa_name
+
+	sudo ppa-purge repository
+
+>> remove temporary cache files,
+	sudo apt-get clean
+
+	sudo apt-get autoclean
+
+>> remove unused packages
+	sudo apt-get autoremove
+
+>> kill processes
+	killall -9 process
+	kill process_number
+
+>> remote copy files
+	scp -r local/path/ remote_user@ipaddr:/path/to/copy
+
+>> memory usage
+	free -m for mb -g for gb
+	cat /proc/meminfo
+	htop
+
+>> cpu information
+	cat /proc/cpuinfo
+
+>> comapre two files
+	diff file1 file2 > file3
+	grep -Fxv -f file1.txt file2.txt
+	comm <(sort file1.txt) <(sort file2.txt) > out.csv
+
+>> simpleHTTPserver
+	got to the directory and give
+	python -m simpleHTTPserver 9999
+	// 9999 is the port
+	//if noting is given port will be 8000
+	//ip will be your ip
+
+>> print waring messages to terminal and into a file
+	gcc -Wall test.c 2>&1 | tee log.txt
+
+>> print warning messages to a file
+	gcc -Wall test.c >log.txt 2>&1
+
+>> Change the network interface name
+	sudo vi /etc/udev/rules.d/70-persistent-net.rules
+	>> SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="02:01:02:03:04:05", ATTR{dev_id}=="0x0", ATTR{type}=="1", NAME="eth0"
+
+>> create mount point
+	sudo mkdir /media/Data
+	>> mount
+		sudo mount -t ext4 /dev/sda3 /media/Data
+
+>> stop and start network manager:
+	sudo service network-manager restart
+=================================================================================
+**************HYPERTHREADING***********
+check for hyperthreading
+
+>> cat /proc/cpuinfo | egrep '^processor|^physical id|^core id'
+
+>> cat /proc/cpuinfo | egrep '^siblings|^cpu cores' | sort -u
+ if the output cpu cores = sibilings  --> no hyperthreading enabled
+ if the output cpu cores = 2*sibilings --> hyperthreading enabled
+=================================================================================
+
+>> Check the drivers
+	lspci | grep "Eth" for ethernet driver
+
+>> HTTP Server
+	sudo python -m SimpleHTTPServer 9999
+
+>> Locations of .bashrc
+	~/home/.bashrc
+	/etc/.bashrc
+	/etc/skel/.bashrc
+
+>> color on bashrc
+	uncomment #forced colo...
+
+>> terminal default color
+	#310423
+
+
+
+
