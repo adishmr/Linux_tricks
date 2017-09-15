@@ -24,12 +24,10 @@
 
 >> remove a repository
 	sudo add-apt-repository -r ppa:ppa_name
-
 	sudo ppa-purge repository
 
 >> remove temporary cache files,
 	sudo apt-get clean
-
 	sudo apt-get autoclean
 
 >> remove unused packages
@@ -109,10 +107,12 @@ check for hyperthreading
 
 >> List available wifi networks
 	nmcli dev wifi list
+
 >> connect to an SSID
 	nmcli device wifi connect SSID-Name password wireless-password
 
 >> Get CPU information
 	cat /proc/cpuinfo
+
 >> Get Memory info
 	cat /proc/meminfo
