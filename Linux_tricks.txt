@@ -12,7 +12,9 @@
 
 >> Change host name of the System.
 	vi /etc/hostname give the new host name
+	
 	vi /etc/hosts in this edit the name on 127.0.1.1 
+
 >> update
 	sudo apt-get update
 
@@ -24,10 +26,12 @@
 
 >> remove a repository
 	sudo add-apt-repository -r ppa:ppa_name
+	
 	sudo ppa-purge repository
 
 >> remove temporary cache files,
 	sudo apt-get clean
+	
 	sudo apt-get autoclean
 
 >> remove unused packages
@@ -35,6 +39,7 @@
 
 >> kill processes
 	killall -9 process
+	
 	kill process_number
 
 >> remote copy files
@@ -42,7 +47,9 @@
 
 >> memory usage
 	free -m for mb -g for gb
+	
 	cat /proc/meminfo
+	
 	htop
 
 >> cpu information
@@ -50,7 +57,9 @@
 
 >> comapre two files
 	diff file1 file2 > file3
+
 	grep -Fxv -f file1.txt file2.txt
+	
 	comm <(sort file1.txt) <(sort file2.txt) > out.csv
 
 >> simpleHTTPserver
@@ -77,6 +86,7 @@
 
 >> stop and start network manager:
 	sudo service network-manager restart
+
 =================================================================================
 **************HYPERTHREADING***********
 check for hyperthreading
@@ -84,10 +94,12 @@ check for hyperthreading
 >> cat /proc/cpuinfo | egrep '^processor|^physical id|^core id'
 
 >> cat /proc/cpuinfo | egrep '^siblings|^cpu cores' | sort -u
- if the output cpu cores = sibilings  --> no hyperthreading enabled
- if the output cpu cores = 2*sibilings --> hyperthreading enabled
-=================================================================================
+ 
+if the output cpu cores = sibilings  --> no hyperthreading enabled
 
+if the output cpu cores = 2*sibilings --> hyperthreading enabled
+
+=================================================================================
 >> Check the drivers
 	lspci | grep "Eth" for ethernet driver
 
@@ -116,3 +128,13 @@ check for hyperthreading
 
 >> Get Memory info
 	cat /proc/meminfo
+>> clear arp cache
+	sudo ip -s -s neigh flush all
+
+>> clear route cache
+	sudo ip route flush cache
+	
+>> install from .deb file
+	sudo apt install ./file.deb
+	
+	sudo apt install /path/to/file.deb
