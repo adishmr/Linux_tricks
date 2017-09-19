@@ -7,6 +7,24 @@
  * this is not an orderly structured commands, I only included the commands,
  * that i tends to forgot.
  * ***************************************************************************/
+>> Print System info
+	uname -a
+	
+	uname -r => kernel version
+	
+	arch command to print machine architecture
+
+>> Check the installed kernel versions
+	dpkg --get-selections | grep linux-image
+	
+	dpkg -l | grep linux-image
+	
+	ls/boot
+	
+>> Change the booting kernel version
+	sudo vi /etc/defaults/grub	
+	GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux version number"
+
 >> System problem detected
 	sudo rm /var/crash/*
 
@@ -69,10 +87,10 @@
 	//if noting is given port will be 8000
 	//ip will be your ip
 
->> print waring messages to terminal and into a file
+>> print warning messages into terminal and into a file
 	gcc -Wall test.c 2>&1 | tee log.txt
 
->> print warning messages to a file
+>> print warning messages into a file
 	gcc -Wall test.c >log.txt 2>&1
 
 >> Change the network interface name
