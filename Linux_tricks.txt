@@ -102,6 +102,14 @@
 	>> mount
 		sudo mount -t ext4 /dev/sda3 /media/Data
 
+>> edit /etc/fstab
+	get uuid using blkid and give Defaults 0 0
+
+>> changing permissions for mount
+	sudo chmod 777 /media/Data/
+	sudo chown $USER:$USER /media/Data/
+	sudo mount /dev/sda3 /media/Data/
+
 >> stop and start network manager:
 	sudo service network-manager restart
 
