@@ -164,3 +164,7 @@ if the output cpu cores = 2*sibilings --> hyperthreading enabled
 	sudo apt install ./file.deb
 	
 	sudo apt install /path/to/file.deb
+
+>> ssh key generation
+	ssh-keygen -t rsa
+	without password, then key will be generated in ~/.ssh/id_rsa.pub
