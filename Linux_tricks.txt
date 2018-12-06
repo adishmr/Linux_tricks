@@ -165,6 +165,8 @@ if the output cpu cores = 2*sibilings --> hyperthreading enabled
 	
 	sudo apt install /path/to/file.deb
 
->> ssh key generation
-	ssh-keygen -t rsa
-	without password, then key will be generated in ~/.ssh/id_rsa.pub
+>> Indian language packs
+	sudo apt-get install fonts-indic
+
+>> check directory size dir
+	du --max-depth=1 -ch
