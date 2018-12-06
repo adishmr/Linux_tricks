@@ -1,0 +1,14 @@
+git clone git.git@ndfndfnfdn
+git clone git.git@fhjdf -b branch_name
+git pull origin branch
+git push origin branch
+git add files
+git reset files
+git commit
+git commit --amend
+git show
+git diff commit
+git log --grep="keyword"
+git log --author="name"
+git log -p /path/file/name
+git log --follow -p -- <file>
