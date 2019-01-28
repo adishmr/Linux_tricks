@@ -12,3 +12,4 @@ git log --grep="keyword"
 git log --author="name"
 git log -p /path/file/name
 git log --follow -p -- <file>
+git name-rev <commit id> = to see the branch where committed
